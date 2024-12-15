@@ -593,7 +593,7 @@ ul {
   fill: #f4f4fd;
 }
 
-.sub-title {
+.sub-text {
   color: #ffffff;
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -653,7 +653,26 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1000;
+  background-color: rgba(46, 47, 66, 0.4);
 }
+
+.modal-content.is-open {
+  display: block;
+}
+
+.form-top {
+  position: fixed;
+  z-index: 1001;
+}
+
 .form-top {
   width: 408px;
   height: 584px;
@@ -732,24 +751,4 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-}
-
-.modal-content {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-
-.modal-content.is-open {
-  display: block;
-}
-
-.form-top {
-  position: fixed;
-  z-index: 1001;
 }

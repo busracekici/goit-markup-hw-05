@@ -447,19 +447,27 @@
             </li>
           </ul>
         </div>
-        <form id="subscribeForm">
-          <label class="sub-title" for="email">Subscribe</label>
-          <div class="email-button">
-            <input id="email" type="email" name="email" placeholder="E-mail" />
+        <div class="footer-form">
+          <p class="sub-text">Subscribe</p>
+          <form id="subscribeForm">
+            <label for="email"></label>
+            <div class="email-button">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
 
-            <button class="button-send" type="submit">
-              Subscribe
-              <svg class="icon-send" width="24" height="20">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
-          </div>
-        </form>
+              <button class="button-send" type="submit">
+                Subscribe
+                <svg class="icon-send" width="24" height="20">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -474,14 +482,14 @@
           </svg>
 
           <label class="phone" for="phone">Phone</label>
-          <input id="phone" type="phone" name="phone" />
+          <input id="phone" type="number" name="phone" />
           <svg width="12" height="12" class="icon-name">
             <use href="./images/icons.svg#icon-phone"></use>
           </svg>
           <label class="back-email" for="back-email">Email</label>
           <input id="back-email" type="email" name="back-email" />
           <svg width="12" height="12" class="icon-name">
-            <use href="./images/icons.svg#on-email"></use>
+            <use href="./images/icons.svg#icon-email"></use>
           </svg>
           <label class="textarea" for="textarea">Comment</label>
           <textarea
