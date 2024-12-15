@@ -449,14 +449,15 @@
         </div>
         <div class="footer-form">
           <p class="sub-text">Subscribe</p>
-          <form id="subscribeForm">
-            <label for="email"></label>
+          <form class="subscribeForm">
             <div class="email-button">
+              <label for="email"></label>
+
               <input
-                id="email"
+                class="email"
                 type="email"
                 name="email"
-                placeholder="E-mail"
+                placeholder="E-posta"
               />
 
               <button class="button-send" type="submit">
@@ -476,21 +477,28 @@
         <h4>Leave your contacts and we will call you back</h4>
         <form class="back-form">
           <label class="name" for="name">Name</label>
-          <input id="name" type="text" name="name" />
-          <svg width="12" height="12" class="icon-name">
-            <use href="./images/icons.svg#icon-name"></use>
-          </svg>
+          <div class="input-svg">
+            <svg width="12" height="12" class="icon-name">
+              <use href="./images/icons.svg#icon-name"></use>
+            </svg>
+            <input id="name" type="text" name="name" />
+          </div>
 
           <label class="phone" for="phone">Phone</label>
-          <input id="phone" type="number" name="phone" />
-          <svg width="12" height="12" class="icon-name">
-            <use href="./images/icons.svg#icon-phone"></use>
-          </svg>
+          <div class="input-svg">
+            <svg width="13" height="13" class="icon-name">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            <input id="phone" type="number" name="phone" />
+          </div>
+
           <label class="back-email" for="back-email">Email</label>
-          <input id="back-email" type="email" name="back-email" />
-          <svg width="12" height="12" class="icon-name">
-            <use href="./images/icons.svg#icon-email"></use>
-          </svg>
+          <div class="input-svg">
+            <svg width="15" height="12" class="icon-name">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+            <input id="back-email" type="email" name="back-email" />
+          </div>
           <label class="textarea" for="textarea">Comment</label>
           <textarea
             id="textarea"
@@ -500,8 +508,8 @@
           ></textarea>
 
           <label class="checkbox">
-            <input type="checkbox" name="checkbox" />I accept the terms and
-            conditions of the <span>Privacy Policy</span>
+            <input class="input-box" type="checkbox" name="checkbox" />I accept
+            the terms and conditions of the <span>Privacy Policy</span>
           </label>
 
           <button class="back-send" type="submit">Send</button>
