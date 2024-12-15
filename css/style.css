@@ -592,6 +592,7 @@ ul {
   height: 24;
   fill: #f4f4fd;
 }
+/*footer form*/
 
 .footer-form {
   display: flex;
@@ -659,7 +660,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
+  /* display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -675,7 +676,7 @@ ul {
 
 .form-top {
   position: fixed;
-  z-index: 1001;
+  z-index: 1001; */
 }
 
 .form-top {
@@ -685,11 +686,11 @@ ul {
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f,
     0px 2px 1px 0px #00000033;
+  display: flex;
+  flex-direction: column;
 }
 
 .back-form {
-  display: flex;
-  flex-direction: column;
   width: 360px;
   margin-left: 24px;
   margin-top: 16px;
@@ -707,7 +708,7 @@ textarea {
   opacity: 40%;
 }
 
-.form-top > h4 {
+.form-top > p {
   margin-top: 72px;
   display: flex;
   justify-content: center;
@@ -765,19 +766,8 @@ textarea {
   color: #404bbf;
 }
 
-.input-svg {
-  border: 1px solid #2e2f4266;
-  border-radius: 4px;
-  opacity: 40%;
-}
-
-.input-svg > input {
-  border: none;
-  outline: none;
-  flex: 1;
-}
-
-.input-svg > svg {
-  color: #2e2f42;
-  margin-left: 18px;
+.modal-form,
+.modal-form-text {
+  display: flex;
+  flex-direction: column;
 }
