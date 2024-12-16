@@ -660,7 +660,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* display: none;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -676,7 +676,7 @@ ul {
 
 .form-top {
   position: fixed;
-  z-index: 1001; */
+  z-index: 1001;
 }
 
 .form-top {
@@ -732,14 +732,14 @@ textarea {
   margin-bottom: 4px;
 }
 
-.checkbox {
+.modal-checkbox {
   margin-top: 16px;
   margin-bottom: 24px;
   display: flex;
   gap: 8px;
 }
 
-.checkbox > span {
+.modal-checkbox > span {
   text-decoration: underline;
   color: #4d5ae5;
 }
@@ -770,4 +770,21 @@ textarea {
 .modal-form-text {
   display: flex;
   flex-direction: column;
+}
+
+.modal-form {
+  position: relative;
+}
+
+.modal-form input {
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+  opacity: 40%;
+}
+
+.modal-form svg {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  margin-left: 16px;
 }
