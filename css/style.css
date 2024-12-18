@@ -665,6 +665,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 72px 24px 24px 24px;
   /* display: none;
   position: fixed;
   top: 0;
@@ -673,6 +674,7 @@ ul {
   height: 100%;
   z-index: 1000;
   background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content.is-open {
@@ -686,13 +688,19 @@ ul {
 
 .form-top {
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   margin-top: 80px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f,
     0px 2px 1px 0px #00000033;
   display: flex;
   flex-direction: column;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .back-form {
@@ -717,6 +725,13 @@ textarea {
   margin-top: 72px;
   display: flex;
   justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 16px;
 }
 
 #user-name,
@@ -749,11 +764,12 @@ textarea {
   color: #4d5ae5;
 }
 
-.back-send {
+.back-send-button {
   height: 56px;
   width: 169px;
   color: #ffffff;
   background-color: #4d5ae5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 4px 0px #00000026;
   margin-left: 95px;
   border-radius: 4px;
@@ -761,6 +777,19 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
+  /* position: absolute; */
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-send-button:hover,
+.back-send-button:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .icon-name:focus {
@@ -779,6 +808,7 @@ textarea {
 
 .modal-form {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .modal-form input {
@@ -792,4 +822,13 @@ textarea {
   top: 70%;
   transform: translateY(-50%);
   margin-left: 16px;
+}
+
+.name {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
