@@ -685,7 +685,8 @@ ul {
     0px 2px 1px 0px #00000033;
   display: flex;
   flex-direction: column;
-
+  position: absolute;
+  border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -745,7 +746,7 @@ textarea {
   gap: 8px;
 }
 
-.modal-checkbox > span {
+.checkbox > span {
   text-decoration: underline;
   color: #4d5ae5;
 }
@@ -763,7 +764,7 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  /* position: absolute; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
   top: 24px;
   right: 24px;
   padding: 0;
