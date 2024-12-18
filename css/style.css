@@ -665,7 +665,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
+  /* display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -681,7 +681,7 @@ ul {
 
 .form-top {
   position: fixed;
-  z-index: 1001;
+  z-index: 1001; */
 }
 
 .form-top {
@@ -719,9 +719,9 @@ textarea {
   justify-content: center;
 }
 
-#name,
+#user-name,
 #phone,
-#back-email {
+#Email {
   height: 40px;
 }
 
