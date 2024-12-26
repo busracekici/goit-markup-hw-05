@@ -670,7 +670,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -686,11 +685,40 @@ ul {
   margin-top: 24px;
   margin-left: 336px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-btn:hover {
+  border: none;
+}
+
+.modal-window-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.x-icon-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window-btn:hover .x-icon-svg {
+  fill: #ffffff;
+}
+
+.modal-window-btn:focus .x-icon-svg {
+  fill: #ffffff;
 }
 
 .modal-window {
   min-height: 584px;
-
+  width: 408px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f,
     0px 2px 1px 0px #00000033;
@@ -722,7 +750,6 @@ textarea {
 }
 
 .modal-title {
-  margin-top: 72px;
   display: flex;
   justify-content: center;
   font-weight: 500;
@@ -759,7 +786,7 @@ textarea {
   gap: 8px;
 }
 
-.checkbox > a {
+.checkbox > span {
   text-decoration: underline;
   color: #4d5ae5;
 }
