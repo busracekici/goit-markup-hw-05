@@ -682,9 +682,10 @@ ul {
   border-radius: 50%;
   border: none;
   display: block;
-  margin-top: 24px;
-  margin-left: 336px;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -759,12 +760,16 @@ textarea {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 16px;
+  margin-top: 72px;
 }
 
 #user-name,
 #phone,
 #Email {
   height: 40px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #textarea {
@@ -781,14 +786,27 @@ textarea {
 
 .modal-checkbox {
   margin-top: 16px;
-
+  margin-bottom: 24px;
   display: flex;
   gap: 8px;
+}
+
+.checkbox {
+  line-height: 1.17;
 }
 
 .checkbox > span {
   text-decoration: underline;
   color: #4d5ae5;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: transparent;
 }
 
 .back-send-button {
@@ -831,6 +849,7 @@ textarea {
 .modal-form-text {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .modal-form-text {
@@ -863,6 +882,11 @@ textarea {
 .modal-form input:hover,
 .modal-form input:focus {
   border-color: #4d5ae5;
+}
+
+.modal-form:hover svg,
+.modal-form:focus svg {
+  fill: #4d5ae5;
 }
 
 .name {
