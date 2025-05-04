@@ -841,7 +841,8 @@ textarea {
   margin-left: 8px;
 }
 
-.checkbox-input:checked + .checkbox-icon {
+.checkbox-input:checked,
+.checkbox-icon {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
