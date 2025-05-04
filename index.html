@@ -535,15 +535,24 @@
               id="user-privacy"
               class="input-box"
               type="checkbox"
-              name="checkbox"
+              name="user-privacy"
               value="true"
+              visually-hidden
             />
-            <label class="checkbox" for="user-privacy"
-              >I accept the terms and conditions of the
-              <span><a href="#">Privacy Policy</a></span>
-              <svg class="icon-tik" width="10" height="8">
-                <use href="./images/icons.svg#icon-Vector-3"></use>
-              </svg>
+            <label class="checkbox" for="user-privacy">
+              <input
+                type="checkbox"
+                id="user-privacy"
+                name="privacy"
+                required
+              />
+              I accept the terms and conditions of the
+              <span class="checkbox-link">
+                <a href="#">Privacy Policy</a>
+                <svg class="icon-tik" width="10" height="8">
+                  <use href="./images/icons.svg#icon-Vector-3"></use>
+                </svg>
+              </span>
             </label>
           </div>
           <button class="back-send-button" type="button">Send</button>
