@@ -819,11 +819,13 @@ textarea {
 
 .checkbox {
   line-height: 1.17;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .checkbox-link {
   text-decoration: underline;
-  color: #4d5ae5;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -835,11 +837,22 @@ textarea {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  color: #4d5ae5;
+  margin-left: 8px;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+.icon-check {
+  width: 10px;
+  height: 8px;
 }
 
 .back-send-button {
-  height: 56px;
-  width: 169px;
   color: #ffffff;
   background-color: #4d5ae5;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -857,6 +870,10 @@ textarea {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .back-send-button:hover,
@@ -869,6 +886,10 @@ textarea {
 .icon-phone:focus,
 .icon-email:focus {
   fill: #4d5ae5;
+}
+
+.input-box {
+  visibility: hidden;
 }
 
 .input-box:focus {
