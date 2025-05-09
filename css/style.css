@@ -490,10 +490,8 @@ ul {
 
 .finished {
   background-color: #2e2f42;
-  height: 312px;
-  padding: 140px 1020px 100px 156px;
-  margin-top: 120px;
   padding: 100px 0;
+  margin-top: 120px;
 }
 
 .logo {
@@ -544,10 +542,9 @@ ul {
 
 .finished .container {
   display: flex;
-  flex-direction: row;
-  gap: 120px;
-  align-items: baseline;
-  width: 1158px;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
 .logo-text {
