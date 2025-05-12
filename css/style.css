@@ -236,8 +236,8 @@ ul {
 }
 
 .random-icon {
-  width: 64;
-  height: 64;
+  width: 64px;
+  height: 64px;
 }
 
 .list {
@@ -335,8 +335,8 @@ ul {
 
 .icon {
   fill: #f4f4fd;
-  width: 16;
-  height: 16;
+  width: 16px;
+  height: 16px;
 }
 
 .job-list > img {
@@ -584,8 +584,8 @@ ul {
 }
 
 .footer-icon {
-  width: 24;
-  height: 24;
+  width: 24px;
+  height: 24px;
   fill: #f4f4fd;
 }
 /*footer form*/
