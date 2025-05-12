@@ -515,7 +515,6 @@ ul {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   width: 264px;
-  margin-left: 156px;
 }
 
 .footer-container {
@@ -653,8 +652,9 @@ ul {
   gap: 24px;
 }
 
-.subscribeForm {
+.form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
