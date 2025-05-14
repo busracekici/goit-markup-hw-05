@@ -478,19 +478,21 @@
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="back-form">
           <div class="modal-form">
-            <label class="name" for="user-name">Name</label>
+            <label class="name" for="user-name" class="form-label">Name</label>
             <div class="inputs-icons-container">
-              <input type="text" id="user-name" name="user-name" required /><svg
-                width="18"
-                height="24"
-                class="icon-name"
-              >
+              <input
+                type="text"
+                id="user-name"
+                name="user-name"
+                class="modal-window-form-input"
+                required
+              /><svg width="18" height="24" class="icon-name">
                 <use href="./images/icons.svg#icon-name"></use>
               </svg>
             </div>
           </div>
           <div class="modal-form">
-            <label class="phone" for="phone">Phone</label>
+            <label class="phone" for="phone" class="form-label">Phone</label>
             <div class="inputs-icons-container">
               <input
                 class="modal-window-form-input"
@@ -505,7 +507,9 @@
             </div>
           </div>
           <div class="modal-form">
-            <label class="back-email" for="Email">Email</label>
+            <label class="back-email" for="Email" class="form-label"
+              >Email</label
+            >
             <div class="inputs-icons-container">
               <input
                 class="modal-window-form-input"

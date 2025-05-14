@@ -910,13 +910,13 @@ textarea {
   height: 40px;
 }
 
-.inputs-icons-container input:hover,
-.inputs-icons-container input:focus {
+#user-name:focus,
+#phone:focus,
+#Email:focus {
   border-color: #4d5ae5;
 }
 
-.inputs-icons-container:hover svg,
-.inputs-icons-container:focus svg {
+.inputs-icons-container input:focus + svg {
   fill: #4d5ae5;
 }
 
@@ -936,7 +936,6 @@ textarea {
   background-color: transparent;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-color: #4d5ae5;
   position: relative;
 }
 
