@@ -886,23 +886,23 @@ textarea {
   background-color: #4d5ae5;
 }
 
-.modal-form,
-.modal-form-text {
+.inputs-icons-container,
+.text-comment {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.modal-form-text {
+.text-comment {
   margin-bottom: 16px;
 }
 
-.modal-form {
+.inputs-icons-container {
   position: relative;
   margin-bottom: 8px;
 }
 
-.modal-form input {
+.inputs-icons-container input {
   border: 1px solid #2e2f4266;
   border-radius: 4px;
   opacity: 40%;
@@ -911,13 +911,13 @@ textarea {
   height: 40px;
 }
 
-.modal-form input:hover,
-.modal-form input:focus {
+.inputs-icons-container input:hover,
+.inputs-icons-container input:focus {
   border-color: #4d5ae5;
 }
 
-.modal-form:hover svg,
-.modal-form:focus svg {
+.inputs-icons-container:hover svg,
+.inputs-icons-container:focus svg {
   fill: #4d5ae5;
 }
 
