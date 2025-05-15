@@ -764,9 +764,7 @@ textarea {
   margin-top: 72px;
 }
 
-#user-name,
-#phone,
-#Email {
+.form-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -775,6 +773,14 @@ textarea {
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
+  position: relative;
+  opacity: 40%;
 }
 
 #textarea {
@@ -786,18 +792,6 @@ textarea {
   padding-left: 38px;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.name,
-.phone,
-.back-email,
-.textarea {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  display: block;
-  margin-bottom: 4px;
 }
 
 .modal-checkbox {
@@ -828,8 +822,7 @@ textarea {
   margin-left: 8px;
 }
 
-.checkbox-input:checked,
-.checkbox-icon {
+.checkbox-input:checked + .checkbox-icon {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -881,11 +874,11 @@ textarea {
   border: none;
 }
 
-.icon-name:focus {
+.input-icon:focus {
   background-color: #4d5ae5;
 }
 
-.inputs-icons-container,
+.input-wrapper,
 .text-comment {
   display: flex;
   flex-direction: column;
@@ -896,53 +889,17 @@ textarea {
   margin-bottom: 16px;
 }
 
-.inputs-icons-container {
-  position: relative;
-  margin-bottom: 8px;
-}
-
-.inputs-icons-container input {
-  border: 1px solid #2e2f4266;
-  border-radius: 4px;
-  opacity: 40%;
-  padding-left: 38px;
-  width: 360px;
-  height: 40px;
-}
-
-#user-name:focus,
-#phone:focus,
-#Email:focus {
+.form-input:focus {
   border-color: #4d5ae5;
 }
 
-.inputs-icons-container input:focus + svg {
+.form-input:focus + svg {
   fill: #4d5ae5;
-}
-
-.name {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  display: block;
-  margin-bottom: 4px;
-  position: relative;
-}
-
-.inputs-icons-container {
-  display: flex;
-  flex-direction: row;
-  background-color: transparent;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
 }
 
 .text-comment {
   width: 360px;
   height: 120px;
-
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
@@ -956,13 +913,14 @@ textarea {
 .text-comment:focus {
   border-color: #4d5ae5;
 }
-
-.icon-name,
-.icon-phone,
-.icon-email {
+.input-icon {
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form {
+  margin-bottom: 8px;
 }
