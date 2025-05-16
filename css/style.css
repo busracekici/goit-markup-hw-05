@@ -819,11 +819,11 @@ textarea {
   fill: #f4f4fd;
 }
 
-.input-box:checked {
+.visually-hidden:checked {
   fill: #f4f4fd;
 }
 
-.input-box:focus {
+.visually-hidden:focus {
   color: #404bbf;
 }
 
