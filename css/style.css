@@ -236,8 +236,8 @@ ul {
 }
 
 .random-icon {
-  width: 64px;
-  height: 64px;
+  width: 64;
+  height: 64;
 }
 
 .list {
@@ -335,8 +335,8 @@ ul {
 
 .icon {
   fill: #f4f4fd;
-  width: 16px;
-  height: 16px;
+  width: 16;
+  height: 16;
 }
 
 .job-list > img {
@@ -490,8 +490,10 @@ ul {
 
 .finished {
   background-color: #2e2f42;
-  padding: 100px 0;
+  height: 312px;
+  padding: 140px 1020px 100px 156px;
   margin-top: 120px;
+  padding: 100px 0;
 }
 
 .logo {
@@ -515,6 +517,7 @@ ul {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   width: 264px;
+  margin-left: 156px;
 }
 
 .footer-container {
@@ -541,9 +544,10 @@ ul {
 
 .finished .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 120px;
+  align-items: baseline;
+  width: 1158px;
 }
 
 .logo-text {
@@ -584,8 +588,8 @@ ul {
 }
 
 .footer-icon {
-  width: 24px;
-  height: 24px;
+  width: 24;
+  height: 24;
   fill: #f4f4fd;
 }
 /*footer form*/
@@ -652,14 +656,14 @@ ul {
   gap: 24px;
 }
 
-.form {
+.subscribeForm {
   display: flex;
-  flex-direction: column;
   gap: 24px;
 }
 
 /* modal section */
 
+/* Arka Plan - Modal Overlay */
 .modal-window {
   position: fixed;
   top: 0;
@@ -669,7 +673,10 @@ ul {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
 }
+
+/* Modal Kutusu */
 .modal-container {
   position: absolute;
   top: 50%;
@@ -682,7 +689,10 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 24px 24px 24px;
 }
+
+/* Kapatma Butonu */
 .modal-container-btn {
   position: absolute;
   top: 24px;
@@ -711,34 +721,23 @@ ul {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-container-btn:focus .x-icon-svg,
-.modal-container-btn:hover .x-icon-svg {
+.modal-container-btn:hover .x-icon-svg,
+.modal-container-btn:focus .x-icon-svg {
   fill: #ffffff;
 }
 
-.back-form {
-  width: 360px;
-  margin-left: 24px;
-  margin-top: 16px;
-  font-weight: 400px;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
-.modal-window-form-input-svg,
-textarea {
+.form-input {
   border: 1px solid #2e2f4266;
   border-radius: 4px;
   opacity: 40%;
 }
 
-.modal-window-form-input-svg {
+.form-input {
   left: 16px;
   top: 50%;
 }
 
+/* Açıklama Metni */
 .modal-title {
   display: flex;
   justify-content: center;
@@ -749,18 +748,21 @@ textarea {
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 16px;
-  margin-top: 72px;
+  margin-top: 48px;
 }
 
-.form-input {
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  background-color: transparent;
-  padding-left: 38px;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+/* Form Elemanları */
+.modal-form {
+  margin-bottom: 8px;
+}
+
+.back-form {
+  width: 360px;
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 
 .form-label {
@@ -770,11 +772,68 @@ textarea {
   color: #8e8f99;
   display: block;
   margin-bottom: 4px;
+}
+
+.input-wrapper {
+  position: relative;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 24px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
   position: relative;
   opacity: 40%;
 }
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-#textarea {
+.form-input:focus {
+  border-color: #4d5ae5;
+}
+
+.form-input:focus + .input-icon {
+  fill: #4d5ae5;
+}
+
+/* Yorum Alanı */
+.textarea-content {
+  margin-bottom: 16px;
+}
+
+.text-comment {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  resize: none;
+}
+
+#text-comment {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -785,56 +844,9 @@ textarea {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox {
-  /* margin-top: 16px; */
-  margin-bottom: 24px;
-  /* display: flex; */
-  /* gap: 8px; */
-}
-
-.checkbox {
-  line-height: 1.17;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
-.add-link {
-  width: 16px;
-  height: 16px;
-  text-decoration: underline;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  color: #4d5ae5;
-  margin-left: 8px;
-}
-
-.user-privacy:checked + .checkbox-icon {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-
-.user-privacy:checked {
-  fill: #f4f4fd;
-}
-
-.user-privacy:focus {
-  color: #404bbf;
-}
-
-.link {
-  color: #4d5ae5;
-}
-
 .back-send-button {
+  height: 56px;
+  min-width: 169px;
   color: #ffffff;
   background-color: #4d5ae5;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -845,16 +857,13 @@ textarea {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.04em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-top: 24px;
   margin-bottom: 24px;
   padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: block;
-  min-width: 169px;
-  height: 56px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back-send-button:hover,
@@ -863,53 +872,9 @@ textarea {
   border: none;
 }
 
-.input-icon:focus {
-  background-color: #4d5ae5;
-}
-
-.input-wrapper,
-.text-comment {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.text-comment {
-  margin-bottom: 16px;
-}
-
-.form-input:focus {
-  border-color: #4d5ae5;
-}
-
-.form-input:focus + svg {
-  fill: #4d5ae5;
-}
-
-.text-comment {
-  width: 360px;
-  height: 120px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  background-color: transparent;
-  padding: 8px 16px;
-  outline: transparent;
-  resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.text-comment:focus {
-  border-color: #4d5ae5;
-}
-.input-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form {
-  margin-bottom: 8px;
+.form-input,
+textarea {
+  border: 1px solid #2e2f4266;
+  border-radius: 4px;
+  opacity: 40%;
 }
